@@ -38,10 +38,10 @@
 			var h = (f / g) / (d / e);
 			var i = (d - f) / d * 100;
 			
-			if (h < 0.71) document.getElementById('result1').innerHTML = 'Коэфициент равен ' + h + '. Это значение указывает на аденому богатую липидами';
-			if (h >= 0.71) document.getElementById('result1').innerHTML = 'Коэфициент равен ' + h + '. Это значение является неопределенным. Рекомендуется тест вымывания КТ';
-			if (i <= 16.5) document.getElementById('result2').innerHTML = 'Коэфициент равен ' + i + '%' + '. Это значение является неопределенным. Рекомендуется тест вымывания КТ';
-			if (i > 16.5) document.getElementById('result2').innerHTML = 'Коэфициент равен ' + i + '%' + '. Это значение указывает на аденому богатую липидами';
+			if (h < 0.71) document.getElementById('result1').innerHTML = 'Соотношение CSI надпочечника и селезенки равно ' + h + '. Это значение указывает на аденому богатую липидами';
+			if (h >= 0.71) document.getElementById('result1').innerHTML = 'Соотношение CSI надпочечника и селезенки равно ' + h + '. Это значение является неопределенным. Рекомендуется тест вымывания КТ';
+			if (i <= 16.5) document.getElementById('result2').innerHTML = 'Индекс интенсивности сигнала надпочечника равен ' + i + '%' + '. Это значение является неопределенным. Рекомендуется тест вымывания КТ';
+			if (i > 16.5) document.getElementById('result2').innerHTML = 'Индекс интенсивности сигнала надпочечника равен ' + i + '%' + '. Это значение указывает на аденому богатую липидами';
 		}
 		</script>
 	</head>
@@ -64,15 +64,15 @@
 						<br>
 						<input class="cbp-mc-submit" value="Вычислить" onclick="arithm();">
 						<br>
-						<h1>Ответ = ((а-b)/а)*100</h1>
-						<h1 name="result0" id="result0"></h1>
+						<h3>Ответ = ((а-b)/а)*100</h3>
+						<h2 name="result0" id="result0"></h2>
 						<br>
 						</details>
 					</div>
 				</form>
 					
-				<form class="cbp-mc-form1">
-					<div class="cbp-mc-column1">
+				<form class="cbp-mc-form">
+					<div class="cbp-mc-column">
 						<details>
 							<summary class="spoiler">Аденома надпочечников МРТ</summary>
 						<label for="arg_3">Значение надпочечника в in-phase (d)</label>
@@ -84,12 +84,12 @@
 	  					<label for="arg_6">Значение селезенки в out-phase (g)</label>
 	  					<input type="text" id="arg_6" name="arg_6" placeholder="0">
 						<br>
-						<input class="cbp-mc-submit1" value="Вычислить" onclick="arithm1();">
+						<input class="cbp-mc-submit" value="Вычислить" onclick="arithm1();">
 						<br>
-						<h1>Соотношение CSI надпочечника и селезенки = (f / g) / (d / e)</h1>
-						<h1 name="result1" id="result1"></h1>
-						<h1>Индекс интенсивности сигнала надпочечника = (d - f) / d * 100</h1>
-						<h1 name="result2" id="result2"></h1>
+						<h3>Соотношение CSI надпочечника и селезенки = (f / g) / (d / e)</h3>
+						<h2 name="result1" id="result1"></h2>
+						<h3>Индекс интенсивности сигнала надпочечника = (d - f) / d * 100</h3>
+						<h2 name="result2" id="result2"></h2>
 							<br>
 						</details>
 					</div>

@@ -34,9 +34,12 @@
 			if (isNaN(f)==true) f=0;
 			if (isNaN(g)==true) g=0;
 			var h = (f / g) / (d / e);
+			var i = (d - f) / d * 100;
 			
 			if (h < 0.71) document.getElementById('result1').innerHTML = 'Коэфициент равен ' + h + '. Это значение указывает на аденому богатую липидами';
 			if (h >= 0.71) document.getElementById('result1').innerHTML = 'Коэфициент равен ' + h + '. Это значение является неопределенным. Рекомендуется тест вымывания КТ';
+			if (i <= 16.5) document.getElementById('result2').innerHTML = 'Коэфициент равен ' + i + '%' + '. Это значение является неопределенным. Рекомендуется тест вымывания КТ';
+			if (i > 16.5) document.getElementById('result2').innerHTML = 'Коэфициент равен ' + i + '%' + '. Это значение указывает на аденому богатую липидами';
 		}
 		</script>
 	</head>
@@ -80,7 +83,7 @@
 						<br>
 						<h1>Соотношение CSI надпочечника и селезенки = (f / g) / (d / e)</h1>
 						<h1 name="result1" id="result1"></h1>
-						<h1>Соотношение CSI надпочечника и селезенки = (f / g) / (d / e)</h1>
+						<h1>Индекс интенсивности сигнала надпочечника = (d - f) / d * 100</h1>
 						<h1 name="result2" id="result2"></h1>
 						</details>
 						

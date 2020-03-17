@@ -9,6 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="css/default.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<script src="js/modernizr.custom.js"></script>
+		
 		<script type="text/javascript"> // калькулятор для процентов
 		function arithm() {
 			var a = parseInt(document.getElementById('arg_1').value);
@@ -22,8 +23,9 @@
 			if (a < b) document.getElementById('result0').innerHTML = 'Увеличилось на ' + Math.abs (c) + '%';
 		}
 		</script>
+		
 		<script type="text/javascript"> // калькулятор для аденомы
-		function arithm() {
+		function arithm1() {
 			var d = parseInt(document.getElementById('arg_3').value);
 			var e = parseInt(document.getElementById('arg_4').value);
 			var f = parseInt(document.getElementById('arg_5').value);
@@ -62,7 +64,7 @@
 						<br>
 						<input class="cbp-mc-submit" value="Вычислить" onclick="arithm();">
 						<br>
-						<h1>Ответ = ((а-в)/а)*100</h1>
+						<h1>Ответ = ((а-b)/а)*100</h1>
 						<h1 name="result0" id="result0"></h1>
 						<br>
 						</details>
@@ -82,7 +84,7 @@
 	  					<label for="arg_6">Значение селезенки в out-phase (g)</label>
 	  					<input type="text" id="arg_6" name="arg_6" placeholder="0">
 						<br>
-						<input class="cbp-mc-submit1" value="Вычислить" onclick="arithm();">
+						<input class="cbp-mc-submit1" value="Вычислить" onclick="arithm1();">
 						<br>
 						<h1>Соотношение CSI надпочечника и селезенки = (f / g) / (d / e)</h1>
 						<h1 name="result1" id="result1"></h1>

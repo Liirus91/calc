@@ -137,7 +137,7 @@
 	clear: both; 
 }
 
-.cbp-mc-column {
+.cbp-mc-column1 {
 	width: 33%;
 	padding: 10px 30px;
 	float: left;
@@ -231,16 +231,16 @@
 }
 
 @media screen and (max-width: 70em) {
-	.cbp-mc-column {
+	.cbp-mc-column1 {
 		width: 50%;
 	}
-	.cbp-mc-column:nth-child(3) {
+	.cbp-mc-column1:nth-child(3) {
 		width: 100%;
 	}
 }
 
 @media screen and (max-width: 48em) {
-	.cbp-mc-column {
+	.cbp-mc-column1 {
 		width: 100%;
 		padding: 10px;
 	}

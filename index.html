@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<title>Пример калькулятора* в вебе</title>
+		<title>Если я не доделаю, озадачь Макса</title>
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/default.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
@@ -18,8 +18,8 @@
 			if (isNaN(b)==true) b=0;
 			var c = ((a - b) / a) * 100;
 			
-			if (a > b) document.getElementById('result').innerHTML = 'Уменьшилось на ' + c + '%';
-			if (a < b) document.getElementById('result').innerHTML = 'Увеличилось на ' + Math.abs (c) + '%';
+			if (a > b) document.getElementById('result0').innerHTML = 'Уменьшилось на ' + c + '%';
+			if (a < b) document.getElementById('result0').innerHTML = 'Увеличилось на ' + Math.abs (c) + '%';
 		}
 		</script>
 		<script type="text/javascript"> // калькулятор для аденомы
@@ -50,11 +50,9 @@
 				<h1>Калькуляторы</h1>
 			</header>	
 			<div class="main">
+				
 				<form class="cbp-mc-form">
 					<div class="cbp-mc-column">
-					</div>
-					<div class="cbp-mc-column">
-						
 						<details>
 							<summary class="spoiler">Изменение образования в процентах</summary>
 						<label for="arg_1">Первое значение (a)</label>
@@ -65,9 +63,14 @@
 						<input class="cbp-mc-submit" value="Вычислить" onclick="arithm();">
 						<br>
 						<h1>Ответ = ((а-в)/а)*100</h1>
-						<h1 name="result" id="result"></h1>
+						<h1 name="result0" id="result0"></h1>
+						<br>
 						</details>
-
+					</div>
+				</form>
+					
+				<form class="cbp-mc-form1">
+					<div class="cbp-mc-column">
 						<details>
 							<summary class="spoiler">Аденома надпочечников МРТ</summary>
 						<label for="arg_3">Значение надпочечника в in-phase (d)</label>
@@ -79,20 +82,17 @@
 	  					<label for="arg_6">Значение селезенки в out-phase (g)</label>
 	  					<input type="text" id="arg_6" name="arg_6" placeholder="0">
 						<br>
-						<input class="cbp-mc-submit" value="Вычислить" onclick="arithm();">
+						<input class="cbp-mc-submit1" value="Вычислить" onclick="arithm();">
 						<br>
 						<h1>Соотношение CSI надпочечника и селезенки = (f / g) / (d / e)</h1>
 						<h1 name="result1" id="result1"></h1>
 						<h1>Индекс интенсивности сигнала надпочечника = (d - f) / d * 100</h1>
 						<h1 name="result2" id="result2"></h1>
+							<br>
 						</details>
-						
-	  				</div>
-					<div class="cbp-mc-column">
 					</div>
-
-				</form>
+				</form>					
 			</div>
-		</div>
+			</div>
 	</body>
 </html>
